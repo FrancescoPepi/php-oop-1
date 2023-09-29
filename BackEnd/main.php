@@ -1,5 +1,6 @@
 <?php
 
+include './Models/Genere.php';
 include './Models/Movie.php';
 include './Database/db.php';
 

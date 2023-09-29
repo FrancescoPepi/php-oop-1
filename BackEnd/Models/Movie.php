@@ -8,7 +8,7 @@ class Movie
     public $descrizione;
     public function __construct(
         string $titolo,
-        string $genere,
+        Genere $genere,
         string $data,
         int $voto,
         string $descrizione,
@@ -22,6 +22,6 @@ class Movie
     }
     public function get_film()
     {
-        return "<hr> Titolo: $this->titolo <br> Uscito: $this->data <br> Genere: $this->genere <br> Voto: $this->voto <br> Descrizione: $this->descrizione<hr>";
+        return "<hr> Titolo: $this->titolo <br> Uscito: $this->data <br> Genere <br> Voto: $this->voto <br> Descrizione: $this->descrizione<hr>";
     }
 }
