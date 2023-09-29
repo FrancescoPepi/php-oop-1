@@ -7,9 +7,7 @@
 
 <body>
   <div id="app">{{ message }}</div>
-  <div class="ciao">
-    ciao
-  </div>
+
 </body>
 
 </html>
