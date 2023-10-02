@@ -1,42 +1,28 @@
 <?php
-class Movie
+class Movie extends Production
 {
     public $titolo;
     public $genres;
     public $data;
     public $voto;
-    // public $descrizione;
+    public $published_year;
+    public $running_time;
     public function __construct(
-        string $titolo = null,
-        array $genres = null,
-        string $data = null,
+        string $titolo,
+        array $genres,
+        string $data,
         int $voto = null,
-        // string $descrizione,
+        int $running_time = null,
 
     ) {
-        $this->titolo = $titolo;
-        $this->genres = $genres;
-        $this->data = $data;
+        parent::__construct($titolo, $genres, $data);
         $this->voto = $voto;
-        // $this->descrizione = $descrizione;
-    }
-    public function get_genres_text()
-    {
-        $text_genre = '';
-        $trattino = '';
-        foreach ($this->genres as $genre => $value) {
-            $genre != (count($this->genres) - 1) ? $trattino = '-' : $trattino = '  ';
-            $text_genre .= $value->genre . $trattino;
-
-
-        }
-        ;
-        return $text_genre;
+        $this->running_time = $running_time;
     }
 
-    public function get_film()
+    public function get_details()
     {
         $text_genre = $this->get_genres_text();
-        return " Titolo: $this->titolo <br> Uscito: $this->data <br> Genere: $text_genre <br> Voto: $this->voto";
+        return " Titolo: $this->titolo <br> Uscito: $this->data <br> Genere: $text_genre <br> Voto: $this->voto <br> Durata: $this->running_time";
     }
 }
