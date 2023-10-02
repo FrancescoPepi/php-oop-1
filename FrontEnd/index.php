@@ -2,11 +2,11 @@
 <html lang="it">
 
 <head>
-  <?php include __DIR__ . '/ComponentHtml/head.php' ?>
+    <?php included __DIR__ . '/ComponentHtml/head.php' ?>
 </head>
 
 <body>
-  <div id="app">{{ message }}</div>
+    <div id="app">{{ message }}</div>
 
 </body>
 
